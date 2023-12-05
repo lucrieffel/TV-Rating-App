@@ -9,13 +9,21 @@ import Foundation
 import SwiftUI
 
 struct Multimedia: Codable, Identifiable{
-    var id: String
-    var mediaTitle: String
-    var mediaContentRating: String
+    var id: String //id of media
+    
+    var mediaTitle: String //name of the movie/tv show
+    
+    var dateWatched: String //modify to a date or calendar drop down if necessary
+    
     var mediaGenre: String // picker drop down menu
-    var isMovie: Bool
-    var isTVShow: Bool
-    var userRating: Float
-    var mediaDirector: String
-    var mediaProducer: String
+
+    var mediaDirector: String //director of movie/tv show
+    
+    var isMovie: Bool // slider to indicate it was a movie
+    
+    var isTVShow: Bool// slider to indicate it was a TV Show
+    
+    var userRating: Float //Users numerical/float rating 1.0-5.0 of the media
+//    
+//    var mediaContentRating: String //PG-13, R, etc.
 }

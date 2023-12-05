@@ -1,0 +1,102 @@
+[
+    {
+        "id": "001",
+        "mediaTitle": "The Shawshank Redemption",
+        "dateWatched": "1994-10-14",
+        "mediaGenre": "Drama",
+        "mediaDirector": "Frank Darabont",
+        "isMovie": true,
+        "isTVShow": false,
+        "userRating": 4.8
+    },
+    {
+        "id": "002",
+        "mediaTitle": "The Godfather",
+        "dateWatched": "1972-03-24",
+        "mediaGenre": "Crime, Drama",
+        "mediaDirector": "Francis Ford Coppola",
+        "isMovie": true,
+        "isTVShow": false,
+        "userRating": 4.7
+    },
+    {
+        "id": "003",
+        "mediaTitle": "The Dark Knight",
+        "dateWatched": "2008-07-18",
+        "mediaGenre": "Action, Crime, Drama",
+        "mediaDirector": "Christopher Nolan",
+        "isMovie": true,
+        "isTVShow": false,
+        "userRating": 4.8
+    },
+    {
+        "id": "004",
+        "mediaTitle": "12 Angry Men",
+        "dateWatched": "1957-04-10",
+        "mediaGenre": "Crime, Drama",
+        "mediaDirector": "Sidney Lumet",
+        "isMovie": true,
+        "isTVShow": false,
+        "userRating": 4.6
+    },
+    {
+        "id": "005",
+        "mediaTitle": "Schindler's List",
+        "dateWatched": "1993-12-15",
+        "mediaGenre": "Biography, Drama, History",
+        "mediaDirector": "Steven Spielberg",
+        "isMovie": true,
+        "isTVShow": false,
+        "userRating": 4.9
+    },
+    {
+        "id": "006",
+        "mediaTitle": "Pulp Fiction",
+        "dateWatched": "1994-10-14",
+        "mediaGenre": "Crime, Drama",
+        "mediaDirector": "Quentin Tarantino",
+        "isMovie": true,
+        "isTVShow": false,
+        "userRating": 4.7
+    },
+    {
+        "id": "007",
+        "mediaTitle": "Forrest Gump",
+        "dateWatched": "1994-07-06",
+        "mediaGenre": "Drama, Romance",
+        "mediaDirector": "Robert Zemeckis",
+        "isMovie": true,
+        "isTVShow": false,
+        "userRating": 4.8
+    },
+    {
+        "id": "008",
+        "mediaTitle": "Inception",
+        "dateWatched": "2010-07-16",
+        "mediaGenre": "Action, Adventure, Sci-Fi",
+        "mediaDirector": "Christopher Nolan",
+        "isMovie": true,
+        "isTVShow": false,
+        "userRating": 4.7
+    },
+    {
+        "id": "009",
+        "mediaTitle": "Fight Club",
+        "dateWatched": "1999-10-15",
+        "mediaGenre": "Drama",
+        "mediaDirector": "David Fincher",
+        "isMovie": true,
+        "isTVShow": false,
+        "userRating": 4.6
+    },
+    {
+        "id": "010",
+        "mediaTitle": "The Matrix",
+        "dateWatched": "1999-03-31",
+        "mediaGenre": "Action, Sci-Fi",
+        "mediaDirector": "Lana Wachowski, Lilly Wachowski",
+        "isMovie": true,
+        "isTVShow": false,
+        "userRating": 4.7
+    }
+]
