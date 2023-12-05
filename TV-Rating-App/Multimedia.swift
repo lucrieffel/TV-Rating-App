@@ -17,4 +17,5 @@ struct Multimedia: Codable, Identifiable{
     var userRating: Float
     var mediaDirector: String
     var mediaProducer: String
+    var mediaXYZ: String
 }
