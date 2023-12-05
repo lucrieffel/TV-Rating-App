@@ -12,10 +12,10 @@ struct Multimedia: Codable, Identifiable{
     var id: String
     var mediaTitle: String
     var mediaContentRating: String
+    var mediaGenre: String // picker drop down menu
     var isMovie: Bool
     var isTVShow: Bool
     var userRating: Float
     var mediaDirector: String
     var mediaProducer: String
-    var mediaXYZ: String
 }
