@@ -19,6 +19,7 @@
 		8D8D4B3F2B1FCD8100AEC3EB /* MultimediaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D4B3E2B1FCD8100AEC3EB /* MultimediaStore.swift */; };
 		8D8D4B412B1FCFF400AEC3EB /* MultimediaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D4B402B1FCFF400AEC3EB /* MultimediaDetail.swift */; };
 		8D8D4B432B20144400AEC3EB /* NewMultimedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D4B422B20144400AEC3EB /* NewMultimedia.swift */; };
+		8D8D4B452B21196300AEC3EB /* MoviePostersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D4B442B21196300AEC3EB /* MoviePostersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		8D8D4B3E2B1FCD8100AEC3EB /* MultimediaStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultimediaStore.swift; sourceTree = "<group>"; };
 		8D8D4B402B1FCFF400AEC3EB /* MultimediaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultimediaDetail.swift; sourceTree = "<group>"; };
 		8D8D4B422B20144400AEC3EB /* NewMultimedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMultimedia.swift; sourceTree = "<group>"; };
+		8D8D4B442B21196300AEC3EB /* MoviePostersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePostersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				8D8D4AFA2B1DAB4B00AEC3EB /* TV_Rating_AppApp.swift */,
 				8D8D4AFC2B1DAB4B00AEC3EB /* ContentView.swift */,
+				8D8D4B442B21196300AEC3EB /* MoviePostersView.swift */,
 				8D8D4B3E2B1FCD8100AEC3EB /* MultimediaStore.swift */,
 				8D8D4B3C2B1FCC4000AEC3EB /* Multimedia_Data.json */,
 				8D8D4B0D2B1FB4AF00AEC3EB /* Multimedia.swift */,
@@ -170,6 +173,7 @@
 				8D8D4AFD2B1DAB4B00AEC3EB /* ContentView.swift in Sources */,
 				8D8D4AFB2B1DAB4B00AEC3EB /* TV_Rating_AppApp.swift in Sources */,
 				8D8D4B3F2B1FCD8100AEC3EB /* MultimediaStore.swift in Sources */,
+				8D8D4B452B21196300AEC3EB /* MoviePostersView.swift in Sources */,
 				8D8D4B412B1FCFF400AEC3EB /* MultimediaDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

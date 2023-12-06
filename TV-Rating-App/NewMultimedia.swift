@@ -48,7 +48,8 @@ struct AddNewMultiMedia: View {
             mediaDirector: mediaDirector,
             isMovie: isMovie,
             isTVShow: isTVShow,
-            userRating: userRating
+            userRating: userRating,
+            imageName: ""
         )
         multimediaStore.multimedias.append(newMultimedia)
         presentationMode.wrappedValue.dismiss()
