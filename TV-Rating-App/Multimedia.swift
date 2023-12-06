@@ -23,7 +23,7 @@ struct Multimedia: Codable, Identifiable{
     
     var isTVShow: Bool// slider to indicate it was a TV Show
     
-    var userRating: Float //Users numerical/float rating 1.0-5.0 of the media
+    var userRating: Double //Users numerical/float rating 1.0-5.0 of the media
 //    
 //    var mediaContentRating: String //PG-13, R, etc.
 }
