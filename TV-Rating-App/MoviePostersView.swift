@@ -9,31 +9,20 @@ import Foundation
 import SwiftUI
 
 struct MoviePostersView: View {
-    var posters = ["forest_gump_poster", "pulp_fiction_poster", "s_list", "The_Godfather_poster", "the_shawshank_redemption_poster"] // ... and so on
+    var posters = ["forest_gump_poster", "pulp_fiction_poster", "s_list", "The_Godfather_poster", "the_shawshank_redemption_poster"]
 
     var body: some View {
-        ScrollView {
-            VStack {
+        ScrollView (.horizontal){
+            HStack {
+                Text("Movies").font(.title)
                 ForEach(posters, id: \.self) { posterName in
                     Image(posterName)
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 200, height: 200)
                         .padding()
                 }
             }
         }
-        .navigationBarTitle("Media Posters", displayMode: .inline)
+        .navigationBarTitle("Recommended Movies", displayMode: .inline)
     }
-    
-//    ScrollView(.horizontal, showsIndicators: false) {
-//        HStack(spacing: 20) {
-//            ForEach(0..<10) {
-//                Text("Item \($0)")
-//                    .foregroundStyle(.white)
-//                    .font(.largeTitle)
-//                    .frame(width: 200, height: 200)
-//                    .background(.red)
-//            }
-//        }
-//    }
 }

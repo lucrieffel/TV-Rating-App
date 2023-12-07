@@ -40,7 +40,7 @@ struct ContentView: View {
             // Second Tab: Recommended Movies
             MoviePostersView()
                 .tabItem {
-                    Label("Posters", systemImage: "photo.on.rectangle.angled")
+                    Label("Recommended", systemImage: "photo.on.rectangle.angled")
                 }
             
             //Third Tab: Watchlist
