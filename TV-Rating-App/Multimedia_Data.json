@@ -8,7 +8,8 @@
          "isMovie": true,
          "isTVShow": false,
          "userRating": 4.8,
-         "imageName": "the_shawshank_redemption_poster"
+         "imageName": "the_shawshank_redemption_poster",
+         "isWatched": true
      },
      {
          "id": "002",
@@ -19,7 +20,8 @@
          "isMovie": true,
          "isTVShow": false,
          "userRating": 4.7,
-         "imageName": "The_Godfather_poster"
+         "imageName": "The_Godfather_poster",
+         "isWatched": true
      },
      {
          "id": "003",
@@ -30,7 +32,8 @@
          "isMovie": true,
          "isTVShow": false,
          "userRating": 4.9,
-         "imageName": "s_list"
+         "imageName": "s_list",
+         "isWatched": true
      },
      {
          "id": "004",
@@ -41,7 +44,8 @@
          "isMovie": true,
          "isTVShow": false,
          "userRating": 4.7,
-         "imageName":"pulp_fiction_poster"
+         "imageName":"pulp_fiction_poster",
+         "isWatched": true
      },
      {
          "id": "005",
@@ -52,6 +56,55 @@
          "isMovie": true,
          "isTVShow": false,
          "userRating": 4.8,
-         "imageName": "forest_gump_poster"
+         "imageName": "forest_gump_poster",
+         "isWatched": true
+     },
+     {
+         "id": "006",
+         "mediaTitle": "Breaking Bad",
+         "dateWatched": "2021-01-01",
+         "mediaGenre": "Action, Thriller",
+         "mediaDirector": "Vince Gilligan",
+         "isMovie": false,
+         "isTVShow": true,
+         "userRating": 4.8,
+         "imageName": "",
+         "isWatched": true
+     },
+     {
+         "id": "007",
+         "mediaTitle": "Friends",
+         "dateWatched": "2019-02-02",
+         "mediaGenre": "Comedy, Drama",
+         "mediaDirector": "David Crane",
+         "isMovie": false,
+         "isTVShow": true,
+         "userRating": 5.0,
+         "imageName": "",
+         "isWatched": true
+     },
+     {
+         "id": "008",
+         "mediaTitle": "Suits",
+         "dateWatched": "2023-11-02",
+         "mediaGenre": "Drama",
+         "mediaDirector": "David Crane",
+         "isMovie": false,
+         "isTVShow": true,
+         "userRating": 4.8,
+         "imageName": "",
+         "isWatched": true
+     },
+     {
+         "id": "009",
+         "mediaTitle": "New Girl",
+         "dateWatched": "2020-10-12",
+         "mediaGenre": "Comedy, Drama",
+         "mediaDirector": "Jay Chandrasekhar",
+         "isMovie": false,
+         "isTVShow": true,
+         "userRating": 5.0,
+         "imageName": "",
+         "isWatched": true
      }
  ]
