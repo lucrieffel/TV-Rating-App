@@ -13,6 +13,8 @@ struct ContentView: View {
 
     var body: some View {
         Text("Hello World!")
+        Text("Hello!")
+
         TabView {
             // First Tab: NavigationView for list of movies/shows
             NavigationView {
