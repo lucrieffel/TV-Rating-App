@@ -12,6 +12,7 @@ struct ContentView: View {
     @StateObject private var multimediaStore: MultimediaStore = MultimediaStore(multimedias: MultimediaData)
 
     var body: some View {
+        Text("Hello World!")
         TabView {
             // First Tab: NavigationView for list of movies/shows
             NavigationView {
