@@ -11,8 +11,6 @@ import SwiftUI
 struct MultimediaDetail: View {
     let selectedMultimedia: Multimedia
     @State private var colorIndex = 0
-//    //define array of colors to randomly choose from
-//    let colors: [Color] = [.black, .red, .blue, .green, .purple, .orange]
     var body: some View {
         Form {
             Section(header: Text("Media Details").font(.largeTitle).padding()) {
