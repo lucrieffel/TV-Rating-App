@@ -31,15 +31,24 @@ struct ContentView: View {
                         .foregroundColor(.blue)
                 }, trailing: EditButton())
             }
+            //First Tab: Watched Movies and Shows
             .tabItem {
                 Label("Movies & Shows", systemImage: "list.dash")
+//                Label("Movies & Shows", systemImage: "list.dash")
             }
 
-            // Second Tab: MoviePostersView
+            // Second Tab: Recommended Movies
             MoviePostersView()
                 .tabItem {
                     Label("Posters", systemImage: "photo.on.rectangle.angled")
                 }
+            
+            //Third Tab: Watchlist
+//            MoviePostersView()
+//                .tabItem {
+//                    Label("Posters", systemImage: "photo.on.rectangle.angled")
+//                }
+            
         }
     }
 

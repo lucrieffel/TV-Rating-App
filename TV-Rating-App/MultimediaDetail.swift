@@ -14,25 +14,26 @@ struct MultimediaDetail: View {
     var body: some View {
         Form {
             Section(header: Text("Media Details").font(.largeTitle).padding()) {
-                VStack(alignment: .leading, spacing: 5) {
-                    Label("Title: \(selectedMultimedia.mediaTitle)", systemImage: "movie")
-                        .font(.headline)
-                    Label("Genre: \(selectedMultimedia.mediaGenre)", systemImage: "text.book.closed")
-                        .font(.headline)
-
-                    Label("Date Watched: \(selectedMultimedia.dateWatched)", systemImage: "date")
-                        .font(.headline)
-                    Label("Director: \(selectedMultimedia.mediaDirector)", systemImage: "doc.text")
-                        .font(.headline)
+                VStack(alignment: .leading, spacing: 3) {
+                    Label(selectedMultimedia.mediaTitle, systemImage: "movie")
+                        .font(.title2)
+                    Spacer()
+                    Label("Genre: \(selectedMultimedia.mediaGenre)", systemImage: "film")
+                        .font(.subheadline)
+                    Label("Date Watched: \(selectedMultimedia.dateWatched)", systemImage: "calendar")
+                        .font(.subheadline)
+                    Label("Director: \(selectedMultimedia.mediaDirector)", systemImage: "person")
+                        .font(.subheadline)
+                    Label("My Rating: \(selectedMultimedia.userRating)", systemImage: "star")
+                        .font(.subheadline)
                     HStack {
                         Text("Movie")
-                            .font(.headline)
+                            .font(.subheadline)
                         Spacer()
                         Image(systemName: selectedMultimedia.isMovie ? "checkmark.circle" : "xmark.circle" )
                             .foregroundColor(selectedMultimedia.isMovie ? .green : .red)
                         Text("TV Show")
-                            .font(.headline)
-                        Spacer()
+                            .font(.subheadline)
                         Image(systemName: selectedMultimedia.isTVShow ? "checkmark.circle" : "xmark.circle" )
                             .foregroundColor(selectedMultimedia.isTVShow ? .green : .red)
                     }
