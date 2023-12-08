@@ -16,7 +16,7 @@ struct ContentView: View {
             // First Tab: Recommended Movies (previously second tab)
             MoviePostersView()
                 .tabItem {
-                    Label("Recommended", systemImage: "photo.on.rectangle.angled")
+                    Label("Recommended", systemImage: "film")
                 }
 
             // Second Tab: Currently Watched Movies and Shows (previously first tab)
@@ -38,7 +38,7 @@ struct ContentView: View {
                 }, trailing: EditButton())
             }
             .tabItem {
-                Label("Movies & Shows", systemImage: "list.dash")
+                Label("My List", systemImage: "list.dash")
             }
 
             // Third Tab: Watchlist
