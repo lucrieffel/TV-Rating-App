@@ -86,6 +86,9 @@ struct ListCell: View {
                     Text("Date Watched: \(multimedia.dateWatched)")
                         .font(.subheadline)
                         .foregroundColor(.gray)
+                    Text("Rating: \(String(format: "%.1f", multimedia.userRating))")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
                 }
             }
             .padding(.horizontal, 8)
