@@ -31,20 +31,20 @@ struct ContentView: View {
                         .foregroundColor(.blue)
                 }, trailing: EditButton())
             }
-            //First Tab: Watched Movies and Shows
+            //First Tab: Currently Watched Movies and Shows, change to recommended
             .tabItem {
                 Label("Movies & Shows", systemImage: "list.dash")
 //                Label("Movies & Shows", systemImage: "list.dash")
             }
 
-            // Second Tab: Recommended Movies
+            // Second Tab: Currently Recommended Moviesm changed to watched movies and shows
             MoviePostersView()
                 .tabItem {
                     Label("Recommended", systemImage: "photo.on.rectangle.angled")
                 }
             
-            //Third Tab: Watchlist
-//            MoviePostersView()
+            //Third Tab: Create a "Watchlist" view, make it in another swift file/code blocl
+//            WatchListView()
 //                .tabItem {
 //                    Label("Posters", systemImage: "photo.on.rectangle.angled")
 //                }
