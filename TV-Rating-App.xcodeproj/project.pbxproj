@@ -20,6 +20,7 @@
 		8D8D4B412B1FCFF400AEC3EB /* MultimediaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D4B402B1FCFF400AEC3EB /* MultimediaDetail.swift */; };
 		8D8D4B432B20144400AEC3EB /* NewMultimedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D4B422B20144400AEC3EB /* NewMultimedia.swift */; };
 		8D8D4B452B21196300AEC3EB /* MoviePostersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D4B442B21196300AEC3EB /* MoviePostersView.swift */; };
+		8D8D4B472B22C98B00AEC3EB /* WatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D4B462B22C98A00AEC3EB /* WatchListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		8D8D4B402B1FCFF400AEC3EB /* MultimediaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultimediaDetail.swift; sourceTree = "<group>"; };
 		8D8D4B422B20144400AEC3EB /* NewMultimedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMultimedia.swift; sourceTree = "<group>"; };
 		8D8D4B442B21196300AEC3EB /* MoviePostersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePostersView.swift; sourceTree = "<group>"; };
+		8D8D4B462B22C98A00AEC3EB /* WatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			children = (
 				8D8D4AFA2B1DAB4B00AEC3EB /* TV_Rating_AppApp.swift */,
 				8D8D4AFC2B1DAB4B00AEC3EB /* ContentView.swift */,
+				8D8D4B462B22C98A00AEC3EB /* WatchListView.swift */,
 				8D8D4B442B21196300AEC3EB /* MoviePostersView.swift */,
 				8D8D4B3E2B1FCD8100AEC3EB /* MultimediaStore.swift */,
 				8D8D4B3C2B1FCC4000AEC3EB /* Multimedia_Data.json */,
@@ -168,6 +171,7 @@
 				8D8D4B0E2B1FB4AF00AEC3EB /* Multimedia.swift in Sources */,
 				8D8D4B432B20144400AEC3EB /* NewMultimedia.swift in Sources */,
 				8D8D4B072B1DAB4D00AEC3EB /* TV_Rating_App.xcdatamodeld in Sources */,
+				8D8D4B472B22C98B00AEC3EB /* WatchListView.swift in Sources */,
 				8D8D4B392B1FC95D00AEC3EB /* MultimediaData.swift in Sources */,
 				8D8D4B042B1DAB4D00AEC3EB /* Persistence.swift in Sources */,
 				8D8D4AFD2B1DAB4B00AEC3EB /* ContentView.swift in Sources */,

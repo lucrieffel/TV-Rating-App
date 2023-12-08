@@ -13,7 +13,13 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            // First Tab: NavigationView for list of movies/shows
+            // First Tab: Recommended Movies (previously second tab)
+            MoviePostersView()
+                .tabItem {
+                    Label("Recommended", systemImage: "photo.on.rectangle.angled")
+                }
+
+            // Second Tab: Currently Watched Movies and Shows (previously first tab)
             NavigationView {
                 List {
                     ForEach(multimediaStore.multimedias) { multimedia in
@@ -31,24 +37,15 @@ struct ContentView: View {
                         .foregroundColor(.blue)
                 }, trailing: EditButton())
             }
-            //First Tab: Currently Watched Movies and Shows, change to recommended
             .tabItem {
                 Label("Movies & Shows", systemImage: "list.dash")
-//                Label("Movies & Shows", systemImage: "list.dash")
             }
 
-            // Second Tab: Currently Recommended Moviesm changed to watched movies and shows
-            MoviePostersView()
+            // Third Tab: Watchlist
+            WatchListView()
                 .tabItem {
-                    Label("Recommended", systemImage: "photo.on.rectangle.angled")
+                    Label("Watchlist", systemImage: "bookmark")
                 }
-            
-            //Third Tab: Create a "Watchlist" view, make it in another swift file/code blocl
-//            WatchListView()
-//                .tabItem {
-//                    Label("Posters", systemImage: "photo.on.rectangle.angled")
-//                }
-            
         }
     }
 
@@ -67,7 +64,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-//structure of each list cell to show certain information in each cell
 struct ListCell: View {
     var multimedia: Multimedia
 
