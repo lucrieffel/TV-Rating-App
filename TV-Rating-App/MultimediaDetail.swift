@@ -46,7 +46,7 @@ struct MultimediaDetail: View {
             }
             .padding(.top)
         }
-        .navigationBarTitle("Assignment Detail", displayMode: .inline)
+        .navigationBarTitle("Media Detail", displayMode: .inline)
     }
 }
 
