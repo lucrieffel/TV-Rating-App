@@ -16,7 +16,7 @@
      {
          "id": "002",
          "mediaTitle": "The Godfather",
-         "dateWatched": "1972-03-24",
+         "dateWatched": "Jan 4, 2018",
          "mediaGenre": "Crime, Drama",
          "mediaDirector": "Francis Ford Coppola",
          "isMovie": true,
@@ -30,7 +30,7 @@
      {
          "id": "003",
          "mediaTitle": "Schindler's List",
-         "dateWatched": "1993-12-15",
+         "dateWatched": "Mar 18, 2021",
          "mediaGenre": "Biography, Drama, History",
          "mediaDirector": "Steven Spielberg",
          "isMovie": true,
@@ -58,7 +58,7 @@
      {
          "id": "005",
          "mediaTitle": "Forrest Gump",
-         "dateWatched": "1994-07-06",
+         "dateWatched": "Oct 28, 2021",
          "mediaGenre": "Drama, Romance",
          "mediaDirector": "Robert Zemeckis",
          "isMovie": true,
@@ -72,7 +72,7 @@
      {
          "id": "006",
          "mediaTitle": "Breaking Bad",
-         "dateWatched": "2021-01-01",
+         "dateWatched": "Apr 2, 2020",
          "mediaGenre": "Action, Thriller",
          "mediaDirector": "Vince Gilligan",
          "isMovie": false,
@@ -86,7 +86,7 @@
      {
          "id": "007",
          "mediaTitle": "Friends",
-         "dateWatched": "2019-02-02",
+         "dateWatched": "Apr 22, 2020",
          "mediaGenre": "Comedy, Drama",
          "mediaDirector": "David Crane",
          "isMovie": false,
@@ -100,7 +100,7 @@
      {
          "id": "008",
          "mediaTitle": "Suits",
-         "dateWatched": "2023-11-02",
+         "dateWatched": "Feb 7, 2023",
          "mediaGenre": "Drama",
          "mediaDirector": "David Crane",
          "isMovie": false,

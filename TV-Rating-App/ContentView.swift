@@ -34,14 +34,6 @@ struct ContentView: View {
                 }
         }
     }
-
-    func deleteItems(at offsets: IndexSet) {
-        multimediaStore.multimedias.remove(atOffsets: offsets)
-    }
-
-    func moveItems(from source: IndexSet, to destination: Int) {
-        multimediaStore.multimedias.move(fromOffsets: source, toOffset: destination)
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
