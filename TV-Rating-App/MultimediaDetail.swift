@@ -29,7 +29,6 @@ struct MultimediaDetail: View {
                     HStack {
                         Text("Movie")
                             .font(.subheadline)
-                        Spacer()
                         Image(systemName: selectedMultimedia.isMovie ? "checkmark.circle" : "xmark.circle" )
                             .foregroundColor(selectedMultimedia.isMovie ? .green : .red)
                         Text("TV Show")

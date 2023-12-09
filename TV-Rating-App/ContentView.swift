@@ -47,7 +47,7 @@ struct ContentView: View {
             // Third Tab: Watchlist
             WatchListView(multimediaStore: multimediaStore)
                 .tabItem {
-                    Label("Watchlist", systemImage: "bookmark")
+                    Label("Watchlist", systemImage: "eye")
                 }
         }
     }

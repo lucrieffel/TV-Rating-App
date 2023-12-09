@@ -10,17 +10,54 @@ import SwiftUI
 
 struct WatchListView: View {
     @ObservedObject var multimediaStore: MultimediaStore
+    
+    private var watchlistMovies: [Multimedia] {
+        multimediaStore.multimedias.filter { $0.isMovie }
+    }
+
+    private var watchlistTVShows: [Multimedia] {
+        multimediaStore.multimedias.filter { $0.isTVShow }
+    }
 
     var body: some View {
         NavigationView {
+            
             List {
-                ForEach(multimediaStore.multimedias.filter { $0.isWatchlist }) { multimedia in
+                SectionHeading(title: "Movies Watchlist")
+                
+                ForEach(multimediaStore.multimedias.filter { $0.isWatchlist && $0.isMovie }) { multimedia in
+                    ListCell(multimedia: multimedia)
+                        .padding(.vertical, 8)
+                }
+                
+                SectionHeading(title: "TV Shows Watchlist")
+
+                ForEach(multimediaStore.multimedias.filter { $0.isWatchlist && $0.isTVShow }) { multimedia in
                     ListCell(multimedia: multimedia)
                         .padding(.vertical, 8)
                 }
                 .onDelete(perform: deleteItems)
                 .onMove(perform: moveItems)
             }
+            
+            List {
+                SectionHeading(title: "Movies Watchlist")
+                
+                ForEach(multimediaStore.multimedias.filter { $0.isWatchlist && $0.isMovie }) { multimedia in
+                    ListCell(multimedia: multimedia)
+                        .padding(.vertical, 8)
+                }
+                
+                SectionHeading(title: "TV Shows Watchlist")
+
+                ForEach(multimediaStore.multimedias.filter { $0.isWatchlist && $0.isTVShow }) { multimedia in
+                    ListCell(multimedia: multimedia)
+                        .padding(.vertical, 8)
+                }
+                .onDelete(perform: deleteItems)
+                .onMove(perform: moveItems)
+            }
+            
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Watchlist")
             .navigationBarItems(leading: NavigationLink(destination: AddNewMultiMedia(multimediaStore: multimediaStore).navigationBarTitle("Add to Watchlist", displayMode: .inline)) {
