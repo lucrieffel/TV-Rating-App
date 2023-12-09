@@ -27,6 +27,8 @@ struct MediaWatchedView: View {
                     ListCell(multimedia: multimedia)
                         .padding(.vertical, 8)
                 }
+                .onDelete(perform: deleteItems)
+                .onMove(perform: moveItems)
                 
                 SectionHeading(title: "TV Shows Watched")
 
@@ -37,6 +39,7 @@ struct MediaWatchedView: View {
                 .onDelete(perform: deleteItems)
                 .onMove(perform: moveItems)
             }
+            
             .listStyle(GroupedListStyle())
             .navigationBarTitle("My Movies and Shows")
             .navigationBarItems(leading: NavigationLink(destination: AddNewMultiMedia(multimediaStore: self.multimediaStore)) {

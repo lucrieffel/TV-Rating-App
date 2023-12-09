@@ -1,15 +1,16 @@
 //
-//  NewMultimedia.swift
+//  AddNewMultimedia.swift
 //  TV-Rating-App
 //
-//  Created by Luc Rieffel on 12/5/23.
+//  Created by Keshia Suwitra on 12/9/23.
 //
+
 
 import Foundation
 import SwiftUI
 
 struct AddNewMultiMedia: View {
-    @Environment(\.presentationMode) var presentationMode
+//    @Environment(\.presentationMode) var presentationMode
     @StateObject var multimediaStore : MultimediaStore
     @State private var mediaTitle = ""
     @State private var dateWatched = ""
@@ -26,18 +27,17 @@ struct AddNewMultiMedia: View {
         Form {
             Section(header: Text("Details")) {
                 DataInput(title: "Title: ", userInput: $mediaTitle)
-                DataInput(title: "Date Watched(yyyy-mm-dd): ", userInput: $dateWatched)
-//                VStack {
-//                    
-//                    DatePicker(selection: $selectedDate, in: ...Date(), displayedComponents: .date, label: { Text("Date Watched: ").bold().padding(10)})
-//                
-//                    Button("Store Date") {
-//                        formatSelectedDate()
-//                    }
-//                
-//                }
-//                .padding()
 
+                VStack {
+                    
+                    DatePicker(selection: $selectedDate, in: ...Date(), displayedComponents: .date, label: { Text("Date Watched: ").bold().padding(10)})
+                
+                    Button("Store Date") {
+                        formatSelectedDate()
+                    }
+                
+                }
+                .padding()
                 
                 DataInput(title: "Genre: ", userInput: $mediaGenre)
                 DataInput(title: "Director: ", userInput: $mediaDirector)
@@ -54,6 +54,7 @@ struct AddNewMultiMedia: View {
             }
         }
     }
+    
     func addNewMedia(){
         let newMultimedia = Multimedia(
             id: UUID().uuidString,
@@ -67,7 +68,7 @@ struct AddNewMultiMedia: View {
             imageName: ""
         )
         multimediaStore.multimedias.append(newMultimedia)
-        presentationMode.wrappedValue.dismiss()
+//        presentationMode.wrappedValue.dismiss()
     }
     
     func formatSelectedDate() {
