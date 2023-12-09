@@ -44,7 +44,7 @@ struct WatchListView: View {
             }
             
             .listStyle(GroupedListStyle())
-            .navigationBarTitle("Watchlist")
+            .navigationBarTitle("My Watchlist")
             .navigationBarItems(leading: NavigationLink(destination: AddNewMultimediaToWatchlist(multimediaStore: multimediaStore).navigationBarTitle("Add to Watchlist", displayMode: .inline)) {
                 Image(systemName: "plus")
                     .imageScale(.large)
