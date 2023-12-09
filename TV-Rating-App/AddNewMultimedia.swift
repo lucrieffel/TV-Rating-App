@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 struct AddNewMultiMedia: View {
-//    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) var presentationMode
     @StateObject var multimediaStore : MultimediaStore
     @State private var mediaTitle = ""
     @State private var dateWatched = ""
@@ -71,7 +71,7 @@ struct AddNewMultiMedia: View {
             imageName: "", isWatched: isWatched, isRecommended: isRecommended, isWatchlist: isWatchlist)
         
         multimediaStore.multimedias.append(newMultimedia)
-//        presentationMode.wrappedValue.dismiss()
+        presentationMode.wrappedValue.dismiss()
     }
     
     func formatSelectedDate() {

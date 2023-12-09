@@ -29,6 +29,9 @@ struct WatchListView: View {
                     ListCell(multimedia: multimedia)
                         .padding(.vertical, 8)
                 }
+                .onDelete(perform: deleteItems)
+                .onMove(perform: moveItems)
+                
                 
                 SectionHeading(title: "TV Shows Watchlist")
 
@@ -42,7 +45,7 @@ struct WatchListView: View {
             
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Watchlist")
-            .navigationBarItems(leading: NavigationLink(destination: AddNewMultiMedia(multimediaStore: multimediaStore).navigationBarTitle("Add to Watchlist", displayMode: .inline)) {
+            .navigationBarItems(leading: NavigationLink(destination: AddNewMultimediaToWatchlist(multimediaStore: multimediaStore).navigationBarTitle("Add to Watchlist", displayMode: .inline)) {
                 Image(systemName: "plus")
                     .imageScale(.large)
                     .foregroundColor(.blue)

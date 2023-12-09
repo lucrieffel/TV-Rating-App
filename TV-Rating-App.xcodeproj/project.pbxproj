@@ -22,6 +22,7 @@
 		8D8D4B472B22C98B00AEC3EB /* WatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D4B462B22C98A00AEC3EB /* WatchListView.swift */; };
 		DF5A6CCC2B245684008F9D9A /* MediaWatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A6CCB2B245684008F9D9A /* MediaWatchedView.swift */; };
 		DF5A6CCE2B251F2A008F9D9A /* AddNewMultimedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A6CCD2B251F2A008F9D9A /* AddNewMultimedia.swift */; };
+		DFA156352B2525EB0086DAE9 /* AddNewMultimediaToWatchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA156342B2525EB0086DAE9 /* AddNewMultimediaToWatchlist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		8D8D4B462B22C98A00AEC3EB /* WatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListView.swift; sourceTree = "<group>"; };
 		DF5A6CCB2B245684008F9D9A /* MediaWatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaWatchedView.swift; sourceTree = "<group>"; };
 		DF5A6CCD2B251F2A008F9D9A /* AddNewMultimedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMultimedia.swift; sourceTree = "<group>"; };
+		DFA156342B2525EB0086DAE9 /* AddNewMultimediaToWatchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMultimediaToWatchlist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				8D8D4B382B1FC95D00AEC3EB /* MultimediaData.swift */,
 				8D8D4B402B1FCFF400AEC3EB /* MultimediaDetail.swift */,
 				DF5A6CCD2B251F2A008F9D9A /* AddNewMultimedia.swift */,
+				DFA156342B2525EB0086DAE9 /* AddNewMultimediaToWatchlist.swift */,
 				8D8D4AFE2B1DAB4D00AEC3EB /* Assets.xcassets */,
 				8D8D4B032B1DAB4D00AEC3EB /* Persistence.swift */,
 				8D8D4B052B1DAB4D00AEC3EB /* TV_Rating_App.xcdatamodeld */,
@@ -183,6 +186,7 @@
 				8D8D4B452B21196300AEC3EB /* MoviePostersView.swift in Sources */,
 				8D8D4B412B1FCFF400AEC3EB /* MultimediaDetail.swift in Sources */,
 				DF5A6CCE2B251F2A008F9D9A /* AddNewMultimedia.swift in Sources */,
+				DFA156352B2525EB0086DAE9 /* AddNewMultimediaToWatchlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
