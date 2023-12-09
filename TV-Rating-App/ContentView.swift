@@ -24,7 +24,7 @@ struct ContentView: View {
             
             MediaWatchedView(multimediaStore: multimediaStore)
                 .tabItem {
-                    Label("My Movies & Shows", systemImage: "list.dash")
+                    Label("My Movies & Shows", systemImage: "movieclapper")
                 }
 
             // Third Tab: Watchlist

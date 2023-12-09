@@ -19,11 +19,25 @@ struct AddNewMultiMedia: View {
     @State private var isTVShow = false
     @State private var userRating = 0.0
     
+    @State private var selectedDate = Date()
+
+    
     var body: some View {
         Form {
             Section(header: Text("Details")) {
                 DataInput(title: "Title: ", userInput: $mediaTitle)
-                DataInput(title: "Date Watched(yyyy-mm-dd): ", userInput: $dateWatched)
+//                DataInput(title: "Date Watched(yyyy-mm-dd): ", userInput: $dateWatched)
+                VStack {
+                    
+                    DatePicker(selection: $selectedDate, in: ...Date(), displayedComponents: .date, label: { Text("Date Watched: ").bold().padding(10)})
+                
+                    Button("Store Date") {
+                        formatSelectedDate()
+                    }
+                }
+                .padding()
+
+                
                 DataInput(title: "Genre: ", userInput: $mediaGenre)
                 DataInput(title: "Director: ", userInput: $mediaDirector)
                 Toggle(isOn: $isMovie) {
@@ -53,6 +67,14 @@ struct AddNewMultiMedia: View {
         )
         multimediaStore.multimedias.append(newMultimedia)
         presentationMode.wrappedValue.dismiss()
+    }
+    
+    private func formatSelectedDate() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+
+        dateWatched = dateFormatter.string(from: selectedDate)
     }
 }
 

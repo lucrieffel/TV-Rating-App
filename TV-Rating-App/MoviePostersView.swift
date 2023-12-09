@@ -27,8 +27,8 @@ struct MoviePostersView: View {
                 .font(.largeTitle)
                 .padding(5)
             
-            Text("Recommended")
-                .font(.largeTitle)
+            Text("Recommended For You")
+                .font(.title)
                 .padding(5)
 
             Spacer()
