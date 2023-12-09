@@ -81,7 +81,7 @@
          "imageName": "breaking_bad",
          "isWatched": true,
          "isRecommended": true,
-         "isWatchlist": true
+         "isWatchlist": false
      },
      {
          "id": "007",

@@ -22,9 +22,15 @@ struct MoviePostersView: View {
     var body: some View {
         VStack {
             // Heading for the Recommended section
+            
+            Text("WatchRater")
+                .font(.largeTitle)
+                .padding(5)
+            
             Text("Recommended")
                 .font(.largeTitle)
                 .padding(5)
+
             Spacer()
 
             // Movies Section

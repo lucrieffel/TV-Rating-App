@@ -12,6 +12,7 @@ struct ContentView: View {
     @StateObject private var multimediaStore = MultimediaStore(multimedias: MultimediaData)
 
     var body: some View {
+        
         TabView {
             // First Tab: Recommended Movies
             MoviePostersView(multimediaStore: multimediaStore)
@@ -20,29 +21,11 @@ struct ContentView: View {
                 }
 
             // Second Tab: My Watched Movies and Shows
-            NavigationView {
-                List {
-                    ForEach(multimediaStore.multimedias.filter { $0.isWatched && $0.isMovie }) { multimedia in
-                        ListCell(multimedia: multimedia)
-                            .padding(.vertical, 8)
-                    }
-                    .onDelete(perform: deleteItems)
-                    .onMove(perform: moveItems)
+            
+            MediaWatchedView(multimediaStore: multimediaStore)
+                .tabItem {
+                    Label("My Movies & Shows", systemImage: "list.dash")
                 }
-                .listStyle(GroupedListStyle())
-                .navigationBarTitle("My Movies and Shows")
-                .navigationBarItems(leading: NavigationLink(destination: AddNewMultiMedia(multimediaStore: multimediaStore).navigationBarTitle("Add Media", displayMode: .inline)) {
-                    Image(systemName: "plus")
-                        .imageScale(.large)
-                        .foregroundColor(.blue)
-                }, trailing: EditButton())
-            }
-            .tabItem {
-                Label("My List", systemImage: "list.dash")
-            }
-            .tabItem {
-                Label("My List", systemImage: "list.dash")
-            }
 
             // Third Tab: Watchlist
             WatchListView(multimediaStore: multimediaStore)

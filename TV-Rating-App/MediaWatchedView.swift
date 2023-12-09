@@ -1,55 +1,52 @@
 //
-//  WatchListView.swift
+//  TVShowWatchlistView.swift
 //  TV-Rating-App
 //
-//  Created by Luc Rieffel on 12/7/23.
+//  Created by Keshia Suwitra on 12/9/23.
 //
 
-import Foundation
 import SwiftUI
 
-struct WatchListView: View {
+struct MediaWatchedView: View {
     @ObservedObject var multimediaStore: MultimediaStore
     
-    private var watchlistMovies: [Multimedia] {
+    private var watchedMovies: [Multimedia] {
         multimediaStore.multimedias.filter { $0.isMovie }
     }
 
-    private var watchlistTVShows: [Multimedia] {
+    private var watchedTVShows: [Multimedia] {
         multimediaStore.multimedias.filter { $0.isTVShow }
     }
-
+    
     var body: some View {
         NavigationView {
-            
             List {
-                SectionHeading(title: "Movies Watchlist")
+                SectionHeading(title: "Movies Watched")
                 
-                ForEach(multimediaStore.multimedias.filter { $0.isWatchlist && $0.isMovie }) { multimedia in
+                ForEach(multimediaStore.multimedias.filter { $0.isWatched && $0.isMovie }) { multimedia in
                     ListCell(multimedia: multimedia)
                         .padding(.vertical, 8)
                 }
                 
-                SectionHeading(title: "TV Shows Watchlist")
+                SectionHeading(title: "TV Shows Watched")
 
-                ForEach(multimediaStore.multimedias.filter { $0.isWatchlist && $0.isTVShow }) { multimedia in
+                ForEach(multimediaStore.multimedias.filter { $0.isWatched && $0.isTVShow }) { multimedia in
                     ListCell(multimedia: multimedia)
                         .padding(.vertical, 8)
                 }
                 .onDelete(perform: deleteItems)
                 .onMove(perform: moveItems)
             }
-            
             .listStyle(GroupedListStyle())
-            .navigationBarTitle("Watchlist")
-            .navigationBarItems(leading: NavigationLink(destination: AddNewMultiMedia(multimediaStore: multimediaStore).navigationBarTitle("Add to Watchlist", displayMode: .inline)) {
+            .navigationBarTitle("My Movies and Shows")
+            .navigationBarItems(leading: NavigationLink(destination: AddNewMultiMedia(multimediaStore: multimediaStore).navigationBarTitle("Add Media", displayMode: .inline)) {
                 Image(systemName: "plus")
                     .imageScale(.large)
                     .foregroundColor(.blue)
             }, trailing: EditButton())
         }
     }
-
+    
     func deleteItems(at offsets: IndexSet) {
         multimediaStore.multimedias.remove(atOffsets: offsets)
     }
@@ -59,10 +56,6 @@ struct WatchListView: View {
     }
 }
 
-struct WatchListView_Previews: PreviewProvider {
-    static var previews: some View {
-        WatchListView(multimediaStore: MultimediaStore(multimedias: MultimediaData))
-    }
+#Preview {
+    MediaWatchedView(multimediaStore: MultimediaStore(multimedias: MultimediaData))
 }
-
-// Assuming ListCell and Multimedia struct are defined in your project
