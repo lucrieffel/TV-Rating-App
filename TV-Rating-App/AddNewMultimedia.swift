@@ -16,10 +16,13 @@ struct AddNewMultiMedia: View {
     @State private var dateWatched = ""
     @State private var mediaGenre = ""
     @State private var mediaDirector = ""
-    @State private var isMovie = true
+    @State private var isMovie = false
     @State private var isTVShow = false
     @State private var userRating = 0.0
-    
+    @State private var isWatched = true
+    @State private var isRecommended = false
+    @State private var isWatchlist = false
+
     @State private var selectedDate = Date()
 
     
@@ -65,8 +68,8 @@ struct AddNewMultiMedia: View {
             isMovie: isMovie,
             isTVShow: isTVShow,
             userRating: userRating,
-            imageName: ""
-        )
+            imageName: "", isWatched: isWatched, isRecommended: isRecommended, isWatchlist: isWatchlist)
+        
         multimediaStore.multimedias.append(newMultimedia)
 //        presentationMode.wrappedValue.dismiss()
     }
