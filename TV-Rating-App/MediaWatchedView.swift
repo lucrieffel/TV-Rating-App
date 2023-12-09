@@ -39,7 +39,7 @@ struct MediaWatchedView: View {
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("My Movies and Shows")
-            .navigationBarItems(leading: NavigationLink(destination: AddNewMultiMedia(multimediaStore: multimediaStore).navigationBarTitle("Add Media", displayMode: .inline)) {
+            .navigationBarItems(leading: NavigationLink(destination: AddNewMultiMedia(multimediaStore: self.multimediaStore)) {
                 Image(systemName: "plus")
                     .imageScale(.large)
                     .foregroundColor(.blue)

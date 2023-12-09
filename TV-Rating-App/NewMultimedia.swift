@@ -26,16 +26,17 @@ struct AddNewMultiMedia: View {
         Form {
             Section(header: Text("Details")) {
                 DataInput(title: "Title: ", userInput: $mediaTitle)
-//                DataInput(title: "Date Watched(yyyy-mm-dd): ", userInput: $dateWatched)
-                VStack {
-                    
-                    DatePicker(selection: $selectedDate, in: ...Date(), displayedComponents: .date, label: { Text("Date Watched: ").bold().padding(10)})
-                
-                    Button("Store Date") {
-                        formatSelectedDate()
-                    }
-                }
-                .padding()
+                DataInput(title: "Date Watched(yyyy-mm-dd): ", userInput: $dateWatched)
+//                VStack {
+//                    
+//                    DatePicker(selection: $selectedDate, in: ...Date(), displayedComponents: .date, label: { Text("Date Watched: ").bold().padding(10)})
+//                
+//                    Button("Store Date") {
+//                        formatSelectedDate()
+//                    }
+//                
+//                }
+//                .padding()
 
                 
                 DataInput(title: "Genre: ", userInput: $mediaGenre)
@@ -48,12 +49,12 @@ struct AddNewMultiMedia: View {
                 }.padding()
                 DataInputDouble(title: "Rating: ", userInput: $userRating)
             }
-            Button(action: addNewAssignment) {
+            Button(action: addNewMedia) {
                 Text("Add Media")
             }
         }
     }
-    func addNewAssignment(){
+    func addNewMedia(){
         let newMultimedia = Multimedia(
             id: UUID().uuidString,
             mediaTitle: mediaTitle,
@@ -69,7 +70,7 @@ struct AddNewMultiMedia: View {
         presentationMode.wrappedValue.dismiss()
     }
     
-    private func formatSelectedDate() {
+    func formatSelectedDate() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
