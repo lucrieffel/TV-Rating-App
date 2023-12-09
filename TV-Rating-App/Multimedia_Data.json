@@ -2,14 +2,16 @@
      {
          "id": "001",
          "mediaTitle": "The Shawshank Redemption",
-         "dateWatched": "1994-10-14",
+         "dateWatched": "2005-10-14",
          "mediaGenre": "Drama",
          "mediaDirector": "Frank Darabont",
          "isMovie": true,
          "isTVShow": false,
          "userRating": 4.8,
          "imageName": "the_shawshank_redemption_poster",
-         "isWatched": true
+         "isWatched": true,
+         "isRecommended": true,
+         "isWatchlist": false
      },
      {
          "id": "002",
@@ -21,7 +23,9 @@
          "isTVShow": false,
          "userRating": 4.7,
          "imageName": "The_Godfather_poster",
-         "isWatched": true
+         "isWatched": true,
+         "isRecommended": false,
+         "isWatchlist": false
      },
      {
          "id": "003",
@@ -33,7 +37,9 @@
          "isTVShow": false,
          "userRating": 4.9,
          "imageName": "s_list",
-         "isWatched": true
+         "isWatched": true,
+         "isRecommended": false,
+         "isWatchlist": false
      },
      {
          "id": "004",
@@ -45,7 +51,9 @@
          "isTVShow": false,
          "userRating": 4.7,
          "imageName":"pulp_fiction_poster",
-         "isWatched": true
+         "isWatched": true,
+         "isRecommended": true,
+         "isWatchlist": false
      },
      {
          "id": "005",
@@ -57,7 +65,9 @@
          "isTVShow": false,
          "userRating": 4.8,
          "imageName": "forest_gump_poster",
-         "isWatched": true
+         "isWatched": true,
+         "isRecommended": true,
+         "isWatchlist": false
      },
      {
          "id": "006",
@@ -68,8 +78,10 @@
          "isMovie": false,
          "isTVShow": true,
          "userRating": 4.8,
-         "imageName": "",
-         "isWatched": true
+         "imageName": "breaking_bad",
+         "isWatched": true,
+         "isRecommended": true,
+         "isWatchlist": true
      },
      {
          "id": "007",
@@ -80,8 +92,10 @@
          "isMovie": false,
          "isTVShow": true,
          "userRating": 5.0,
-         "imageName": "",
-         "isWatched": true
+         "imageName": "friends_poster",
+         "isWatched": true,
+         "isRecommended": false,
+         "isWatchlist": false
      },
      {
          "id": "008",
@@ -92,8 +106,10 @@
          "isMovie": false,
          "isTVShow": true,
          "userRating": 4.8,
-         "imageName": "",
-         "isWatched": true
+         "imageName": "suits_poster",
+         "isWatched": false,
+         "isRecommended": true,
+         "isWatchlist": false
      },
      {
          "id": "009",
@@ -104,7 +120,24 @@
          "isMovie": false,
          "isTVShow": true,
          "userRating": 5.0,
-         "imageName": "",
-         "isWatched": true
+         "imageName": "new_girl_poster",
+         "isWatched": false,
+         "isRecommended": true,
+         "isWatchlist": true
+     },
+     {
+         "id": "010",
+         "mediaTitle": "The Office",
+         "dateWatched": "2018-01-12",
+         "mediaGenre": "Comedy, Drama",
+         "mediaDirector": "Greg Daniels",
+         "isMovie": false,
+         "isTVShow": true,
+         "userRating": 5.0,
+         "imageName": "the_office_poster",
+         "isWatched": false,
+         "isRecommended": true,
+         "isWatchlist": true
      }
+
  ]

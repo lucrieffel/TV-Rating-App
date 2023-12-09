@@ -9,8 +9,15 @@ import Foundation
 import SwiftUI
 
 struct MoviePostersView: View {
-    var moviePosters = ["forest_gump_poster", "pulp_fiction_poster", "s_list", "The_Godfather_poster", "the_shawshank_redemption_poster"]
-    var tvShowPosters = ["tv_show_poster1", "tv_show_poster2", "tv_show_poster3"] // Add your TV show poster names here
+    @ObservedObject var multimediaStore: MultimediaStore
+
+    private var recommendedMovies: [Multimedia] {
+        multimediaStore.multimedias.filter { $0.isRecommended && $0.isMovie }
+    }
+
+    private var recommendedTVShows: [Multimedia] {
+        multimediaStore.multimedias.filter { $0.isRecommended && $0.isTVShow }
+    }
 
     var body: some View {
         VStack {
@@ -21,12 +28,13 @@ struct MoviePostersView: View {
             Spacer()
 
             // Movies Section
-            Text("Movies").font(.title)
+            SectionHeading(title: "Movies")
             ScrollView(.horizontal) {
                 HStack {
-                    ForEach(moviePosters, id: \.self) { posterName in
-                        Image(posterName)
+                    ForEach(recommendedMovies, id: \.id) { media in
+                        Image(media.imageName)
                             .resizable()
+                            .scaledToFit()
                             .frame(width: 200, height: 200)
                             .padding()
                     }
@@ -34,12 +42,13 @@ struct MoviePostersView: View {
             }
 
             // TV Shows Section
-            Text("TV Shows").font(.title)
+            SectionHeading(title: "TV Shows")
             ScrollView(.horizontal) {
                 HStack {
-                    ForEach(tvShowPosters, id: \.self) { posterName in
-                        Image(posterName)
+                    ForEach(recommendedTVShows, id: \.id) { media in
+                        Image(media.imageName)
                             .resizable()
+                            .scaledToFit()
                             .frame(width: 200, height: 200)
                             .padding()
                     }
@@ -50,3 +59,12 @@ struct MoviePostersView: View {
     }
 }
 
+struct SectionHeading: View {
+    var title: String
+    
+    var body: some View {
+        Text(title)
+            .font(.title)
+            .padding(.vertical, 5)
+    }
+}

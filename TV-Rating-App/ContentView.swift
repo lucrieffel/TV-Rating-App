@@ -9,20 +9,20 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @StateObject private var multimediaStore: MultimediaStore = MultimediaStore(multimedias: MultimediaData)
+    @StateObject private var multimediaStore = MultimediaStore(multimedias: MultimediaData)
 
     var body: some View {
         TabView {
-            // First Tab: Recommended Movies (previously second tab)
-            MoviePostersView()
+            // First Tab: Recommended Movies
+            MoviePostersView(multimediaStore: multimediaStore)
                 .tabItem {
                     Label("Recommended", systemImage: "film")
                 }
 
-            // Second Tab: Currently Watched Movies and Shows (previously first tab)
+            // Second Tab: My Watched Movies and Shows
             NavigationView {
                 List {
-                    ForEach(multimediaStore.multimedias) { multimedia in
+                    ForEach(multimediaStore.multimedias.filter { $0.isWatched && $0.isMovie }) { multimedia in
                         ListCell(multimedia: multimedia)
                             .padding(.vertical, 8)
                     }
@@ -31,7 +31,7 @@ struct ContentView: View {
                 }
                 .listStyle(GroupedListStyle())
                 .navigationBarTitle("My Movies and Shows")
-                .navigationBarItems(leading: NavigationLink(destination: AddNewMultiMedia(multimediaStore: self.multimediaStore).navigationBarTitle("Add Media", displayMode: .inline)) {
+                .navigationBarItems(leading: NavigationLink(destination: AddNewMultiMedia(multimediaStore: multimediaStore).navigationBarTitle("Add Media", displayMode: .inline)) {
                     Image(systemName: "plus")
                         .imageScale(.large)
                         .foregroundColor(.blue)
@@ -40,9 +40,12 @@ struct ContentView: View {
             .tabItem {
                 Label("My List", systemImage: "list.dash")
             }
+            .tabItem {
+                Label("My List", systemImage: "list.dash")
+            }
 
             // Third Tab: Watchlist
-            WatchListView()
+            WatchListView(multimediaStore: multimediaStore)
                 .tabItem {
                     Label("Watchlist", systemImage: "bookmark")
                 }

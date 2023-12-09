@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 
 struct WatchListView: View {
-    @StateObject private var multimediaStore: MultimediaStore = MultimediaStore(multimedias: MultimediaData)
+    @ObservedObject var multimediaStore: MultimediaStore
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(multimediaStore.multimedias) { multimedia in
+                ForEach(multimediaStore.multimedias.filter { $0.isWatchlist }) { multimedia in
                     ListCell(multimedia: multimedia)
                         .padding(.vertical, 8)
                 }
@@ -23,7 +23,7 @@ struct WatchListView: View {
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Watchlist")
-            .navigationBarItems(leading: NavigationLink(destination: AddNewMultiMedia(multimediaStore: self.multimediaStore).navigationBarTitle("Add to Watchlist", displayMode: .inline)) {
+            .navigationBarItems(leading: NavigationLink(destination: AddNewMultiMedia(multimediaStore: multimediaStore).navigationBarTitle("Add to Watchlist", displayMode: .inline)) {
                 Image(systemName: "plus")
                     .imageScale(.large)
                     .foregroundColor(.blue)
@@ -42,7 +42,7 @@ struct WatchListView: View {
 
 struct WatchListView_Previews: PreviewProvider {
     static var previews: some View {
-        WatchListView()
+        WatchListView(multimediaStore: MultimediaStore(multimedias: MultimediaData))
     }
 }
 

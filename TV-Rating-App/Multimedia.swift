@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Multimedia: Codable, Identifiable{
+struct Multimedia: Identifiable, Decodable{
     var id: String //id of media
     
     var mediaTitle: String //name of the movie/tv show
@@ -28,6 +28,10 @@ struct Multimedia: Codable, Identifiable{
     var imageName: String = "movie_clips" // name of the image in "Assets", default is a blank image
     
     var isWatched: Bool = false
+    
+    var isRecommended: Bool = true
+    
+    var isWatchlist: Bool = true
 
 //
 //    var mediaContentRating: String //PG-13, R, etc.
