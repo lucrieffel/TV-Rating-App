@@ -9,9 +9,9 @@
          "isTVShow": false,
          "userRating": 4.8,
          "imageName": "the_shawshank_redemption_poster",
-         "isWatched": true,
+         "isWatched": false,
          "isRecommended": true,
-         "isWatchlist": false
+         "isWatchlist": true
      },
      {
          "id": "002",
@@ -51,9 +51,9 @@
          "isTVShow": false,
          "userRating": 4.7,
          "imageName":"pulp_fiction_poster",
-         "isWatched": true,
+         "isWatched": false,
          "isRecommended": true,
-         "isWatchlist": false
+         "isWatchlist": true
      },
      {
          "id": "005",
@@ -65,7 +65,7 @@
          "isTVShow": false,
          "userRating": 4.8,
          "imageName": "forest_gump_poster",
-         "isWatched": true,
+         "isWatched": false,
          "isRecommended": true,
          "isWatchlist": false
      },
