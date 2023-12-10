@@ -21,7 +21,7 @@ struct MediaWatchedView: View {
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("MOVIES")) {
+                Section(header: Text("MOVIES").font(.title2)) {
                     
                     ForEach(multimediaStore.multimedias.filter { $0.isWatched && $0.isMovie }) { multimedia in
                         ListCell(multimedia: multimedia)
@@ -30,9 +30,9 @@ struct MediaWatchedView: View {
                     
                     .onDelete(perform: deleteItems)
                     .onMove(perform: moveItems)
-                }                
+                }
                 
-                Section(header: Text("TV SHOWS")) {
+                Section(header: Text("TV SHOWS").font(.title2)) {
                     
                     ForEach(multimediaStore.multimedias.filter { $0.isWatched && $0.isTVShow }) { multimedia in
                         ListCell(multimedia: multimedia)
