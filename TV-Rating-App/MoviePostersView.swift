@@ -70,3 +70,8 @@ struct SectionHeading: View {
             .padding(.vertical, 5)
     }
 }
+
+//Show Preview
+#Preview {
+    MoviePostersView(multimediaStore: MultimediaStore(multimedias: MultimediaData))
+}
