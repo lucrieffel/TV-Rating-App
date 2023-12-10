@@ -21,23 +21,26 @@ struct MediaWatchedView: View {
     var body: some View {
         NavigationView {
             List {
-                SectionHeading(title: "Movies Watched")
+                Section(header: Text("MOVIES")) {
+                    
+                    ForEach(multimediaStore.multimedias.filter { $0.isWatched && $0.isMovie }) { multimedia in
+                        ListCell(multimedia: multimedia)
+                            .padding(.vertical, 8)
+                    }
+                    
+                    .onDelete(perform: deleteItems)
+                    .onMove(perform: moveItems)
+                }                
                 
-                ForEach(multimediaStore.multimedias.filter { $0.isWatched && $0.isMovie }) { multimedia in
-                    ListCell(multimedia: multimedia)
-                        .padding(.vertical, 8)
+                Section(header: Text("TV SHOWS")) {
+                    
+                    ForEach(multimediaStore.multimedias.filter { $0.isWatched && $0.isTVShow }) { multimedia in
+                        ListCell(multimedia: multimedia)
+                            .padding(.vertical, 8)
+                    }
+                    .onDelete(perform: deleteItems)
+                    .onMove(perform: moveItems)
                 }
-                .onDelete(perform: deleteItems)
-                .onMove(perform: moveItems)
-                
-                SectionHeading(title: "TV Shows Watched")
-
-                ForEach(multimediaStore.multimedias.filter { $0.isWatched && $0.isTVShow }) { multimedia in
-                    ListCell(multimedia: multimedia)
-                        .padding(.vertical, 8)
-                }
-                .onDelete(perform: deleteItems)
-                .onMove(perform: moveItems)
             }
             
             .listStyle(GroupedListStyle())
