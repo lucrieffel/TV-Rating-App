@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 var MultimediaData: [Multimedia] = loadJson("Multimedia_Data.json")
-
+//load and decode JSON dataset
 func loadJson<T: Decodable>(_ filename: String) -> T {
     let data: Data
     guard let file = Bundle.main.url(forResource: filename,

@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+//structure of view type to show more details of the multimedia
 struct MultimediaDetail: View {
     let selectedMultimedia: Multimedia
     @State private var colorIndex = 0

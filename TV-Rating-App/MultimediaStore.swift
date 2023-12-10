@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-
+//create a class to store data from multimedia_data dataset
 class MultimediaStore : ObservableObject {
     @Published var multimedias: [Multimedia]
     

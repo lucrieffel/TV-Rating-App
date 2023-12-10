@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    //State object referencing to the dataset of multimedia that we have made of movies and tv shows
     @StateObject private var multimediaStore = MultimediaStore(multimedias: MultimediaData)
 
     var body: some View {
@@ -21,13 +22,12 @@ struct ContentView: View {
                 }
 
             // Second Tab: My Watched Movies and Shows
-            
             MediaWatchedView(multimediaStore: multimediaStore)
                 .tabItem {
                     Label("My Movies & Shows", systemImage: "movieclapper")
                 }
 
-            // Third Tab: Watchlist
+            // Third Tab: Watchlist: Movies the user wants to watch
             WatchListView(multimediaStore: multimediaStore)
                 .tabItem {
                     Label("Watchlist", systemImage: "eye")
@@ -36,17 +36,20 @@ struct ContentView: View {
     }
 }
 
+//show preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
 
+
+//Structure to define what will be displayed in each listcell,
 struct ListCell: View {
     var multimedia: Multimedia
-
     var body: some View {
         NavigationLink(destination: MultimediaDetail(selectedMultimedia: multimedia)) {
+            //make hstack and vstack to display genre, date watched, and rating(for watchlist and my movies/shows)
             HStack {
                 Image(multimedia.imageName) // Display the image
                     .resizable()

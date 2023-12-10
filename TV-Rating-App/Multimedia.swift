@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+//structure to define the attributes of each multimedia
 struct Multimedia: Identifiable, Decodable{
     var id: String //id of media
     
@@ -32,7 +33,4 @@ struct Multimedia: Identifiable, Decodable{
     var isRecommended: Bool = true
     
     var isWatchlist: Bool = true
-
-//
-//    var mediaContentRating: String //PG-13, R, etc.
 }

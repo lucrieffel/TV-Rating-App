@@ -8,13 +8,12 @@
 import Foundation
 import SwiftUI
 
+//structure called movieposters view but this was later developed to be the recommended tab
 struct MoviePostersView: View {
     @ObservedObject var multimediaStore: MultimediaStore
-
     private var recommendedMovies: [Multimedia] {
         multimediaStore.multimedias.filter { $0.isRecommended && $0.isMovie }
     }
-
     private var recommendedTVShows: [Multimedia] {
         multimediaStore.multimedias.filter { $0.isRecommended && $0.isTVShow }
     }
@@ -22,7 +21,6 @@ struct MoviePostersView: View {
     var body: some View {
         VStack {
             // Heading for the Recommended section
-            
             Text("WatchRater")
                 .font(.largeTitle)
                 .padding(5)
