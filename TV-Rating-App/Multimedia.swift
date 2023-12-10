@@ -28,9 +28,9 @@ struct Multimedia: Identifiable, Decodable{
     
     var imageName: String = "movie_clips" // name of the image in "Assets", default is a blank image
     
-    var isWatched: Bool = false
+    var isWatched: Bool = false //true if the user has watched it before
     
-    var isRecommended: Bool = true
+    var isRecommended: Bool = true //true if the media is recommended
     
-    var isWatchlist: Bool = true
+    var isWatchlist: Bool = true //true if its in the watchlist
 }

@@ -28,9 +28,7 @@ struct MoviePostersView: View {
             Text("Recommended For You")
                 .font(.title)
                 .padding(5)
-
             Spacer()
-
             // Movies Section
             SectionHeading(title: "Movies")
             ScrollView(.horizontal) {
@@ -44,7 +42,6 @@ struct MoviePostersView: View {
                     }
                 }
             }
-
             // TV Shows Section
             SectionHeading(title: "TV Shows")
             ScrollView(.horizontal) {
@@ -63,6 +60,7 @@ struct MoviePostersView: View {
     }
 }
 
+//Create a structure to add a heading to the view
 struct SectionHeading: View {
     var title: String
     

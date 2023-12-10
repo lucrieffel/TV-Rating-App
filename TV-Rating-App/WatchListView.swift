@@ -10,47 +10,43 @@ import SwiftUI
 
 //structure that is of a view type, this will contain our watchlist
 struct WatchListView: View {
-    //reference the multimediaStore dataset
     @ObservedObject var multimediaStore: MultimediaStore
-    
-    //create variables to separate movies and tv shows
+    // variable that filters conditions watchlist and movie
     private var watchlistMovies: [Multimedia] {
-        multimediaStore.multimedias.filter { $0.isMovie }
+        multimediaStore.multimedias.filter { $0.isWatchlist && $0.isMovie }
     }
+    // variable that filters conditions watchlist and tv show
     private var watchlistTVShows: [Multimedia] {
-        multimediaStore.multimedias.filter { $0.isTVShow }
+        multimediaStore.multimedias.filter { $0.isWatchlist && $0.isTVShow }
     }
-    //create the navigation view
     var body: some View {
         NavigationView {
-            
             List {
-                Section(header:
-                    Text("MOVIES").font(.system(.title2, design: .rounded))
-
-                ) {
-                    //loop through Movies
-                    ForEach(multimediaStore.multimedias.filter { $0.isWatchlist && $0.isMovie }) { multimedia in
+                //Movies Section
+                Section(header: Text("MOVIES").font(.system(.title2, design: .rounded))) {
+                    ForEach(watchlistMovies) { multimedia in
                         ListCell(multimedia: multimedia)
                             .padding(.vertical, 8)
                     }
-                    
-                    .onDelete(perform: deleteItems)
+                    //Delete movies(function listed below)
+                    .onDelete(perform: { offsets in
+                        deleteItems(at: offsets, from: watchlistMovies)
+                    })
                     .onMove(perform: moveItems)
                 }
-                Section(header: Text("TV SHOWS").font(.system(.title2, design: .rounded))
-                ) {
-                //loop through TV shows
-                    ForEach(multimediaStore.multimedias.filter { $0.isWatchlist && $0.isTVShow }) { multimedia in
+                //TV Shows Section
+                Section(header: Text("TV SHOWS").font(.system(.title2, design: .rounded))) {
+                    ForEach(watchlistTVShows) { multimedia in
                         ListCell(multimedia: multimedia)
                             .padding(.vertical, 8)
                     }
-                    .onDelete(perform: deleteItems)
+                    //delete tv shows(using function)
+                    .onDelete(perform: { offsets in
+                        deleteItems(at: offsets, from: watchlistTVShows)
+                    })
                     .onMove(perform: moveItems)
                 }
-                
             }
-            
             .listStyle(GroupedListStyle())
             .navigationBarTitle("My Watchlist")
             .navigationBarItems(leading: NavigationLink(destination: AddNewMultimediaToWatchlist(multimediaStore: multimediaStore).navigationBarTitle("Add to Watchlist", displayMode: .inline)) {
@@ -60,15 +56,18 @@ struct WatchListView: View {
             }, trailing: EditButton())
         }
     }
-    //function to delete items with edit feature
-    func deleteItems(at offsets: IndexSet) {
-        multimediaStore.multimedias.remove(atOffsets: offsets)
+    //delete items from list function(using index)
+    func deleteItems(at offsets: IndexSet, from items: [Multimedia]) {
+        let idsToDelete = offsets.map { items[$0].id }
+        multimediaStore.multimedias.removeAll(where: { idsToDelete.contains($0.id) })
     }
-    //function to move items using edit feature
+    // move items in list function
     func moveItems(from source: IndexSet, to destination: Int) {
         multimediaStore.multimedias.move(fromOffsets: source, toOffset: destination)
     }
 }
+
+
 
 //show preview
 struct WatchListView_Previews: PreviewProvider {
