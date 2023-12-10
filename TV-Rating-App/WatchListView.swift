@@ -23,8 +23,10 @@ struct WatchListView: View {
         NavigationView {
             
             List {
-                Section(header: Text("MOVIES")) {
-                    
+                Section(header:
+                    Text("MOVIES").font(.system(.title2, design: .rounded))
+
+                ) {
                     ForEach(multimediaStore.multimedias.filter { $0.isWatchlist && $0.isMovie }) { multimedia in
                         ListCell(multimedia: multimedia)
                             .padding(.vertical, 8)
@@ -35,7 +37,9 @@ struct WatchListView: View {
                 }
                 
                 
-                Section(header: Text("TV SHOWS")) {
+                Section(header: Text("TV SHOWS").font(.system(.title2, design: .rounded))
+                        
+                ) {
                     
                     ForEach(multimediaStore.multimedias.filter { $0.isWatchlist && $0.isTVShow }) { multimedia in
                         ListCell(multimedia: multimedia)
