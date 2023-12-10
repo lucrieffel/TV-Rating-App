@@ -21,5 +21,5 @@
 ### None
 
 # Contributions: 
-### Luc: ContentView, MyMovies and Shows Views, JSON data(coding and decoding), NavigationView(s), and Tabview(s)
+### Luc: ContentView, MyMovies and Shows Views, JSON data(coding and decoding), NavigationView(s), Tabview(s), and ScrollView(s)
 ### Keshia: App Wireframing, Prototypes & Design, Final Presentation, AddNewMultimedia, and Recommended view page
